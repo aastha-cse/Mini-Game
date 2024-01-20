@@ -1,4 +1,7 @@
 import React from 'react';
+import btn1 from './assets/btn1.png';
+import btn2 from './assets/btn2.png';
+import btn3 from './assets/btn3.png';
 
 function Choice({ onUserChoice }) {
   const handleClick = (choice) => {
@@ -6,16 +9,10 @@ function Choice({ onUserChoice }) {
   };
 
   return (
-    <div className='buttons'>
-      <button className='rock' onClick={() => handleClick('rock')}>
-        Rock
-      </button>
-      <button className='paper' onClick={() => handleClick('paper')}>
-        Paper
-      </button>
-      <button className='scissors' onClick={() => handleClick('scissors')}>
-        Scissors
-      </button>
+    <div className='choose'>
+      <img src={btn1} alt='' className='button' onClick={() => handleClick('rock')}></img>
+      <img src={btn2} alt='' className='button' onClick={() => handleClick('paper')}></img>
+      <img src={btn3} alt='' className='button' onClick={() => handleClick('scissors')}></img>
     </div>
   );
 }

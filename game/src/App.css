@@ -1,51 +1,52 @@
-.game{
-  border: 1px solid black;
-  padding: 40px;
-  border-radius: 5px;
-  text-align: center;
-  width: fit-content;
+body, html, #root, #root > div {
+  margin: 0;
+  padding: 0;
 }
 
-.result{
-  border: 1px solid black;
-  padding: 40px;
-  border-radius: 40px;
-  margin-bottom: 20px;
-  font-size: 40px;
+
+.game{
+  background-image: url('C:\Users\hp\Desktop\game\Mini-Game\game\src\assets\background.png');
+  padding: 10px;
   text-align: center;
+  width: auto;
+  height: 100vh;
+  margin: 0px;
+}
+
+.result, h3{
+  padding: 10px;
+  font-size: 50px;
+  text-align: center;
+  color: black;
+  font-family: cursive;
 }
 
 .choices{
-  border: 1px solid black;
-  
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice{
+  height: 300px;
+  width: 350px;
+}
+
+.gesture{
+  height: 350px;
+  width: 350px;
+}
+
+.vs{
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 50px;
+  color: black;
+  font-family: cursive;
+  margin: 100px;
 }
 
-.computerChoice{
-  border: 1px solid black;
-  display: inline-block;
-  height: 250px;
-  width: 350px;
-}
-
-.userChoice{
-  border: 1px solid black;
-  display: inline-block;
-  height: 250px;
-  width: 350px;
-}
-
-.rock{
-  margin-right: 30px;
-}
-
-.paper{
-  margin-right: 30px;
-}
-
-.userGesture{
-  height: 205px;
-  width: 350px;
+.button{
+  height: 150px;
+  width: 150px;
+  margin-top: 50px;
 }

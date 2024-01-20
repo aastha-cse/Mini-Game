@@ -1,19 +1,21 @@
-import React, { useState} from 'react';
-import Choice from './Choice';
-import './App.css';
-import user_rock from './assets/user_rock.png';
-import user_paper from './assets/user_paper.png';
-import user_scissors from './assets/user_scissors.png';
-import computer_rock from './assets/computer_rock.png';
-import computer_paper from './assets/computer_paper.png';
-import computer_scissors from './assets/computer_scissors.png';
+import React, { useState } from "react";
+import Choice from "./Choice";
+import "./App.css";
+import user_rock from "./assets/user_rock.png";
+import user_paper from "./assets/user_paper.png";
+import user_scissors from "./assets/user_scissors.png";
+import user from "./assets/user.png";
+import computer_rock from "./assets/computer_rock.png";
+import computer_paper from "./assets/computer_paper.png";
+import computer_scissors from "./assets/computer_scissors.png";
+import computer from "./assets/computer.png";
 
 function App() {
   const [computerChoice, setComputerChoice] = useState(null);
   const [userChoice, setUserChoice] = useState(null);
 
   const handleComputerChoice = () => {
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = ["rock", "paper", "scissors"];
     const choice = choices[Math.floor(Math.random() * 3)];
     setComputerChoice(choice);
   };
@@ -25,27 +27,27 @@ function App() {
 
   const getUserChoiceImage = () => {
     switch (userChoice) {
-      case 'rock':
+      case "rock":
         return user_rock;
-      case 'paper':
+      case "paper":
         return user_paper;
-      case 'scissors':
+      case "scissors":
         return user_scissors;
       default:
-        return null;
+        return user;
     }
   };
 
   const getComputerChoiceImage = () => {
     switch (computerChoice) {
-      case 'rock':
+      case "rock":
         return computer_rock;
-      case 'paper':
+      case "paper":
         return computer_paper;
-      case 'scissors':
+      case "scissors":
         return computer_scissors;
       default:
-        return null;
+        return computer;
     }
   };
 
@@ -54,38 +56,34 @@ function App() {
       if (userChoice === computerChoice) {
         return "It's a Draw!";
       } else if (
-        (userChoice === 'rock' && computerChoice === 'scissors') ||
-        (userChoice === 'paper' && computerChoice === 'rock') ||
-        (userChoice === 'scissors' && computerChoice === 'paper')
+        (userChoice === "rock" && computerChoice === "scissors") ||
+        (userChoice === "paper" && computerChoice === "rock") ||
+        (userChoice === "scissors" && computerChoice === "paper")
       ) {
-        return 'Congratulations! you win';
+        return "Congratulations! you win";
       } else {
-        return 'Sorry! you lose';
+        return "Sorry! you lose";
       }
     }
-    return null; 
+    return null;
   };
 
   return (
-    <div className='game'>
-      {userChoice !== null && (
-        <div className="result">
-          {calculateResult()}
-        </div>
-      )}
+    <div className="game">
+      <div className="result">{userChoice ? calculateResult() : "Make a choice..."}</div>
 
       <div className="choices">
-      <div className="computerChoice">Computer's Choice: {computerChoice}
-      <br></br>
-      <img src={getComputerChoiceImage()} alt='' className='userGesture'></img></div>
-      <span>vs</span>
-      <div className="userChoice">User's Choice: {userChoice || 'Waiting for user'}
-      <br></br>
-      <img src={getUserChoiceImage()} alt='' className='userGesture'></img></div>
+        <div className="choice">
+          <img src={getComputerChoiceImage()} alt="" className="gesture"></img>
+        </div>
+        <div className="vs">vs</div>
+        <div className="choice">
+          <img src={getUserChoiceImage()} alt="" className="gesture"></img>
+        </div>
       </div>
 
-      <div className="button">
-      <Choice onUserChoice={handleUserChoice} />
+      <div className="buttons">
+        <Choice onUserChoice={handleUserChoice} />
       </div>
     </div>
   );
