@@ -5,7 +5,7 @@ body, html, #root, #root > div {
 
 
 .game{
-  background-image: url('C:\Users\hp\Desktop\game\Mini-Game\game\src\assets\background.png');
+  background-image: url('C:\Users\hp\Desktop\game\Mini-Game\src\assets\background.png');
   padding: 10px;
   text-align: center;
   width: auto;
