@@ -6,7 +6,7 @@ function Choice({ onUserChoice }) {
   };
 
   return (
-    <div className='button'>
+    <div className='buttons'>
       <button className='rock' onClick={() => handleClick('rock')}>
         Rock
       </button>
