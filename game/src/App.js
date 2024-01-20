@@ -4,7 +4,9 @@ import './App.css';
 import user_rock from './assets/user_rock.png';
 import user_paper from './assets/user_paper.png';
 import user_scissors from './assets/user_scissors.png';
+import computer_rock from './assets/computer_rock.png';
 import computer_paper from './assets/computer_paper.png';
+import computer_scissors from './assets/computer_scissors.png';
 
 function App() {
   const [computerChoice, setComputerChoice] = useState(null);
@@ -37,11 +39,11 @@ function App() {
   const getComputerChoiceImage = () => {
     switch (computerChoice) {
       case 'rock':
-        return computer_paper;
+        return computer_rock;
       case 'paper':
         return computer_paper;
       case 'scissors':
-        return computer_paper;
+        return computer_scissors;
       default:
         return null;
     }
