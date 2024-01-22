@@ -4,7 +4,7 @@ A fun and interactive Rock, Paper, Scissors game built for the web. Play against
 
 ## Demo
 
-![Game Demo](./src/assets/demo.mp4)
+![Game Demo](src/assets/demo.mp4)
 
 ## Visit and Play
 
