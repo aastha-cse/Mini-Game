@@ -2,10 +2,6 @@
 
 A fun and interactive Rock, Paper, Scissors game built for the web. Play against the computer and test your luck!
 
-## Demo
-
-![Game Demo](https://github.com/aastha-cse/Mini-Game/assets/100745494/66eb5647-1c8e-4a15-91fa-9aa1ba2b571d)
-
 ## Visit and Play
 
 https://stone-paper-scissors-minigame.netlify.app/
