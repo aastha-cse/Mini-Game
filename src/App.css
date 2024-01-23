@@ -1,11 +1,13 @@
-body, html, #root, #root > div {
+body,
+html,
+#root,
+#root > div {
   margin: 0;
   padding: 0;
 }
 
-
-.game{
-  background-image: url('../src/assets/background.png');
+.game {
+  background-image: url("../src/assets/background.png");
   padding: 10px;
   text-align: center;
   width: auto;
@@ -13,56 +15,81 @@ body, html, #root, #root > div {
   margin: 0px;
 }
 
-.result, h3{
+.result,
+h3 {
   padding: 10px;
-  font-size: 4vw;
+  font-size: 50px;
   text-align: center;
   color: black;
   font-family: cursive;
 }
 
-.choices{
+.choices {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.choice{
-  height: 20vw;
-  width: 80vw;
-  margin-bottom: 10px;
+.choice {
+  height: 300px;
+  width: 350px;
 }
 
-.gesture{
-  height: 40vw;
-  width: 60vw;
+.gesture {
+  height: 350px;
+  width: 350px;
 }
 
-.vs{
+.vs {
   text-align: center;
-  font-size: 4vw;
+  font-size: 50px;
   color: black;
   font-family: cursive;
   margin: 100px;
 }
 
-.button{
-  height: 18vw;
-  width: 18vw;
-  margin-top: 60px;
+.button {
+  height: 150px;
+  width: 150px;
+  margin-top: 50px;
 }
 
 @media only screen and (max-width: 768px) {
   .game {
-    height: auto; 
+    height: auto;
   }
 
-  .result, h3 {
+  .choices {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .result,
+  h3 {
     font-size: 6vw;
+    margin-bottom: 0;
+  }
+
+  .choice {
+    height: 30vw;
+    width: 40vw;
+  }
+
+  .choice img {
+    margin: 0;
+    height: 50vw;
+    width: 49vw;
   }
 
   .vs {
-    margin-bottom: 9vh; 
+    margin-top: 10vh;
+    margin-bottom: 0;
+    font-size: 6vw;
+  }
+
+  .button {
+    height: 90px;
+    width: 90px;
+    margin-top: 10vh;
   }
 }
